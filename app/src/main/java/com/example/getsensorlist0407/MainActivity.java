@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     TextView mTxtSensors;
     SensorManager sensorMgr;
     List<Sensor> sensorList;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
         mTxtSensors = findViewById(R.id.txtSensors);
         mButton = findViewById(R.id.button1);
-        mButton.setOnClickListener((View.OnClickListener)this);
+        mButton.setOnClickListener(this);
 
     }
 
